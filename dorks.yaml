@@ -1,0 +1,11 @@
+dorks:
+# PHP login pages
+- intext:"/login.php" intitle:"login"
+# ASPX login pages
+- inurl:/login.aspx
+# ASPX admin login
+- inurl:/admin.aspx
+# List of interesting files that should not be accessible
+- site:"target[.]com" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
+# WordPress registration site
+- inurl:/wp-login.php?action=register intext:"Register For This Site"
