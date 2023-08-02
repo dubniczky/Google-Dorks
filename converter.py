@@ -1,8 +1,9 @@
 import sys
 import json
 import yaml
+import shutil
 
-
+DORKS_FILE = 'dorks.yaml'
 directory = sys.argv[1]
 
 
@@ -11,11 +12,15 @@ def write(file, data):
         f.write(data)
 
 # Read dorks file
-with open('dorks.yaml', 'r') as f:
+with open(DORKS_FILE, 'r') as f:
     dorks = yaml.safe_load(f)
 print(f'Loaded {len(dorks["dorks"])} dorks')
 
 dorklist = list(map(lambda x: x['dork'], dorks['dorks']))
+
+# yaml
+shutil.copyfile(DORKS_FILE, f'{directory}/{DORKS_FILE}')
+print(f'Created {DORKS_FILE}')
 
 # json
 name = 'dorks.json'
