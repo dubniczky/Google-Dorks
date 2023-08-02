@@ -14,3 +14,9 @@ List of google dorks to find vulnerabilities in various formats
 make install
 make convert
 ```
+
+## Sources
+
+A non-complete list of sources for the dorks
+
+- https://www.exploit-db.com/google-hacking-database
