@@ -13,3 +13,19 @@ dorks:
 
 - desc: WordPress registration site
   dork: inurl:/wp-login.php?action=register intext:"Register For This Site"
+
+- desc: Files left over from development
+  dork: intitle:"index of" "users.yml" | "admin.yml" | "config.yml"
+
+- desc: Hikvision cameras open to the internet
+  dork: intext:"Please respect other people’s privacy and rights when using product." hikvision
+
+- desc: Printers open to the internet
+  dork: intitle:Web Image Monitor inurl:mainFrame.cgi
+
+- desc: PHP version info page left from development
+  dork: inurl:info.php intext:"PHP Version" intitle:"phpinfo()"
+
+- desc: Exposed AWS S3 buckets with listing enabled
+  dork: intitle:"index.of" *S3
+  
