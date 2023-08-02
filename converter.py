@@ -3,6 +3,7 @@ import json
 import yaml
 import shutil
 
+
 DORKS_FILE = 'dorks.yaml'
 directory = sys.argv[1]
 
